@@ -1,0 +1,38 @@
+create database cbs1;
+
+use cbs1;
+
+create table account(username varchar(30), name varchar(40), password varchar(30), question varchar(100), answer  varchar(50));
+
+create table customer(username varchar(30), id_type varchar(20), number varchar(20), name varchar(30), gender varchar(15), country varchar(20), address varchar(50), phone varchar(20), email varchar(40));
+
+create table intercab(username varchar(30), driver varchar(20), source varchar(20), destination varchar(30), car varchar(15), type varchar(20), price varchar(50), ref varchar(20));
+
+create table intercity(source varchar(20), destination varchar(20), type varchar(20),driver varchar(20), price varchar(20), car varchar(50));
+
+create table intracab(username varchar(30), driver varchar(20), source varchar(20), destination varchar(30), car varchar(15), price varchar(50), ref varchar(20));
+
+create table intracity(source varchar(20), destination varchar(20), driver varchar(20), price varchar(20), car varchar(50));
+
+create table intransport(name varchar(20), dname varchar(20), source varchar(20), destination varchar(20), truck varchar(20), weight varchar(20), distance varchar(20), price varchar(20));
+
+create table transport(source varchar(20), destination varchar(20), dname varchar(20), price varchar(20),  truck varchar(20), distance varchar(5) );
+
+insert into intracity values('src1','dest1','driver1','500','car1');
+insert into intracity values('src2','dest2','driver2','600','car2');
+insert into intracity values('src3','dest3','driver3','700','car3');
+insert into intracity values('src4','dest4','driver4','800','car4');
+insert into intracity values('src5','dest5','driver5','550','car5');
+
+
+insert into intercity values('src1','dest1','Micro','driver1','500','car1');
+insert into intercity values('src2','dest2','Mini','driver2','600','car2');
+insert into intercity values('src3','dest3','SUV','driver3','700','car3');
+insert into intercity values('src4','dest4','Micro','driver4','800','car4');
+insert into intercity values('src5','dest5','Mini','driver5','550','car5');
+
+insert into transport values('src1','dest1','driver1','500','Truck1','300');
+insert into transport values('src2','dest2','driver2','600','Truck2','500');
+insert into transport values('src3','dest3','driver3','700','Truck3','600');
+insert into transport values('src4','dest4','driver4','800','Truck4','700');
+insert into transport values('src5','dest5','driver5','550','Truck5','300');
